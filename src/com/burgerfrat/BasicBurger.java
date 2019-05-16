@@ -1,4 +1,5 @@
 package com.burgerfrat;
+//Written by Carla Pastor
 
 public class BasicBurger {
     private String burgerName;
@@ -21,40 +22,37 @@ public class BasicBurger {
         this.priceAddition1 = price;
     }
     public void trackBurgerAddition2(String name, double price){
-        this.nameAddition1 = name;
-        this.priceAddition1 = price;
+        this.nameAddition2 = name;
+        this.priceAddition2 = price;
     }
     public void trackBurgerAddition3(String name, double price){
-        this.nameAddition1 = name;
-        this.priceAddition1 = price;
+        this.nameAddition3 = name;
+        this.priceAddition3 = price;
     }
     public void trackBurgerAddition4(String name, double price){
-        this.nameAddition1 = name;
-        this.priceAddition1 = price;
+        this.nameAddition4 = name;
+        this.priceAddition4 = price;
     }
     public double totalPriceBurger(){
         double totalBurgerPrice = this.basicPrice;
-        System.out.println(this.burgerName + " hamburger " + "on a " + this.basicBread + " basic bread. Price is: $" + this.basicPrice);
+        System.out.println(this.burgerName + " hamburger " + "with " + this.basicBread + " bread and " + this.meatType +
+                ". Its price is: $" + this.basicPrice);
 
         if(this.nameAddition1!=null){
-            totalBurgerPrice = totalBurgerPrice + this.priceAddition1;
+            totalBurgerPrice += this.priceAddition1;
             System.out.println("Added: " + this.nameAddition1 + " for an extra: $" + this.priceAddition1);
-
         }
         if(this.nameAddition2!=null){
-            totalBurgerPrice = totalBurgerPrice + this.priceAddition2;
+            totalBurgerPrice += this.priceAddition2;
             System.out.println("Added: " + this.nameAddition2 + " for an extra: $" + this.priceAddition2);
-
         }
         if(this.nameAddition3!=null){
-            totalBurgerPrice = totalBurgerPrice + this.priceAddition3;
+            totalBurgerPrice += this.priceAddition3;
             System.out.println("Added: " + this.nameAddition3 + " for an extra: $" + this.priceAddition3);
-
         }
         if(this.nameAddition4!=null){
-            totalBurgerPrice = totalBurgerPrice + this.priceAddition4;
+            totalBurgerPrice += this.priceAddition4;
             System.out.println("Added: " + this.nameAddition4 + " for an extra: $" + this.priceAddition4);
-
         }
         return totalBurgerPrice;
     }
